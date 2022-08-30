@@ -1,0 +1,124 @@
+body {
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  background-color: #D0B3FF;
+}
+
+.body{
+  border-radius: 50px;
+
+  height: 600px;
+  width: 400px;
+  display: grid;
+  grid-template-rows: auto 2px 100px ;
+
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+#timer{
+  background-color: #ffffff;
+  display: grid;
+  place-content: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.divider{
+  background-color: black;
+}
+.btns{
+  background-color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  display: grid;
+place-content: center;
+
+}
+
+.btn-wrapper{ 
+  width: 100%;
+  height: 100%;
+  
+
+}
+
+.custombtn{
+  cursor: pointer;
+  height: 30px;
+  border-radius: 50px;
+
+  width: 70px;
+  text-align: center;
+  background-color: #A22BD1;
+  line-height: 30px;
+  font-size: 80%;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  color: rgb(245, 232, 250);
+  display: inline-block;
+}
+#reset-btn:hover{
+  background-color: #D0B3FF;
+  color: #A22BD1;
+  
+
+}
+
+
+ /* Timer */
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 2px;
+  stroke: grey;
+  stroke-dasharray: .5,10;
+  stroke-linecap: round;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 2px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+.base-timer__path-remaining{
+  color: rgb(162, 43, 209);
+}
+
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
