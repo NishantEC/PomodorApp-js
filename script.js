@@ -3,17 +3,28 @@
 const FULL_DASH_ARRAY = 283;
 
 
+sessionTime = 25*60
+breakTime = 5*60
 
+let TIME_LIMIT = sessionTime;
 
-const TIME_LIMIT = 200;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = -1;
 let isPlaying = false;
+let isSession = true;
 
-document.getElementById("base-timer-label").textContent = formatTime(
-  timeLeft
-)
+sessionActivity();
+function setTime(){
+  if (isSession){
+     TIME_LIMIT = sessionTime;
+  }else{ TIME_LIMIT = breakTime;}
+  document.getElementById("base-timer-label").textContent = formatTime(
+    timeLeft
+  )
+}
+
+
 function onTimesUp() {
   clearInterval(timerInterval);
   document.getElementById("play-btn").textContent="Start";
@@ -94,3 +105,20 @@ function resetTimer() {
   setCircleDasharray();
 
 }
+
+
+function sessionActivity(){
+  isSession = true;
+  setTime();
+  resetTimer();
+  document.getElementById("session-btn").style.backgroundColor = "#D0B3FF";
+  document.getElementById("break-btn").style.backgroundColor = "#A22BD1";
+}
+function breakActivity(){
+  isSession = false;
+  setTime();
+  resetTimer();
+  document.getElementById("break-btn").style.backgroundColor = "#D0B3FF";
+  document.getElementById("session-btn").style.backgroundColor = "#A22BD1";
+}
+
