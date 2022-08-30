@@ -122,3 +122,16 @@ place-content: center;
   justify-content: center;
   font-size: 48px;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .body{
+    border-radius: 30px;
+    height: 700px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 2px 100px ;
+
+}
+
+}
