@@ -1,3 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  transition: .1s  linear;
+  -moz-transition: .1s  linear;
+  -ms-transition: .1s  linear;
+  -o-transition: .1s  linear;
+  -webkit-transition: .1s  linear;
+}
 body {
   font-family: sans-serif;
   display: grid;
@@ -5,6 +14,7 @@ body {
   place-items: center;
   background-color: #D0B3FF;
 }
+
 
 .body{
   border-radius: 50px;
@@ -65,11 +75,11 @@ place-content: center;
   -o-border-radius: 50px;
   color: rgb(245, 232, 250);
   display: inline-block;
+  border: solid 2px #A22BD1;
 }
 #reset-btn:hover{
   background-color: #D0B3FF;
   color: #A22BD1;
-  
 
 }
 
@@ -94,7 +104,7 @@ place-content: center;
 .base-timer__path-elapsed {
   stroke-width: 2px;
   stroke: grey;
-  stroke-dasharray: .5,10;
+  stroke-dasharray: 5,5;
   stroke-linecap: round;
 }
 
@@ -135,3 +145,4 @@ place-content: center;
 }
 
 }
+
